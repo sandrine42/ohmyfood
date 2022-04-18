@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0e1489d9e9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <title>ohmyfood-Réservez le menu qui vous convient !</title>
+</head>
+    <!-- body -->
+<body>
+    <!-- loder -->
+    <div class="loader"></div>
+    <!-- fin loader -->
+    <!-- header -->
+    <header>
+        <!-- logo -->
+        <h1 class="logo">ohmyfood</h1>
+        <!--fin logo-->
+        <!-- search : localistion -->
+        <div class="search">
+            <!-- search : picto -->
+            <div class="search__picto">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <!--fin search : picto -->
+            <!-- search : input, placeholder -->
+            <input class="search__city" name="search-city" id="search__city" type="text" placeholder="Paris, Belleville">
+            <!-- fin search : input, placeholder -->
+        </div>
+        <!-- fin search : localistion -->
+        <!-- presentation : introduction et btn autres restaurants -->
+        <div class="presentation">
+            <!-- presentation : titre -->
+            <h2 class="presentation__title">Réservez le menu qui vous convient</h2>
+            <!--fin presentation : titre -->
+            <!-- presentation : texte -->
+            <p class="presentation__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <!-- fin presentation : texte -->
+            <!-- presentation : bouton -->
+            <div class="presentation__btn">Explorer nos restaurants</div>
+            <!-- fin presentation : bouton -->
+        </div>
+        <!-- fin presentation : introduction et btn autres restaurants -->
+        <!-- method : fonctionnement, 3 choix -->
+        <div class="method">
+            <!-- method : titre -->
+            <h2 class="method__title">Fonctionnement</h2>
+            <!--fin method : titre -->
+            <!-- method : step : étapes : 3 choix -->
+            <div class="method__step">
+                <!-- method : step 1 : btn 1 : Choisissez un restaurant-->
+                <div class="method__step-btn">
+                <span>1</span>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>Choisissez un restaurant</p>
+                </div>
+                <!--fin method : step 1 : btn 1 : Choisissez un restaurant-->
+                <!-- method : step 2 : btn 2 : Composez votre menu-->
+                <div class="method__step-btn">
+                <span>2</span>
+                <i class="fa-solid fa-list-ul"></i>
+                <p>Composez votre menu</p>
+                </div>
+                <!--fin method : step 2 : btn 2 : Composez votre menu-->
+                <!-- method : step 3 : btn 3 : Dégustez au restaurant-->
+                <div class="method__step-btn">
+                <span>3</span>
+                <i class="fa-solid fa-store"></i>
+                <p>Dégustez au restaurant</p>
+                </div>
+                <!--fin  method : step 3 : btn 3 : Dégustez au restaurant-->
+            </div>
+            <!--fin method : step : étapes : 3 choix -->
+        </div>
+        <!-- fin method : fonctionnement, 3 choix -->
+    </header>
+    <!-- fin header -->
+    <!-- main container -->
+    <main class="container">
+        <!-- section restaurants -->
+        <section class="restaurants">
+            <!-- section restaurants : titre -->
+            <h2 class="restaurants__title">Restaurants</h2>
+            <!--fin section restaurants : titre -->
+            <!-- section restaurants : container cards -->
+            <div class="restaurants__boxes">
+                <!-- section restaurants : boxes : toutes les cards -->
+                <div class="restaurant__boxes__card">
+                    <!-- section restaurants : card 1 : La palette du goût -->
+                    <div class="card">
+                        <div class="card__new">
+                            <p>Nouveau</p>
+                        </div>
+                        <div class="card__img"><img src="C:/Users/1/ohmyfood/images/palette-du-gout.jpg" alt="La palette du goût"></div>
+                        <div class="card__text">
+                            <h3 class="card__title">La palette du goût</h3>
+                            <p class="card__city-name">Ménilmontant</p>
+                        </div>
+                        <div class="card__heart">
+                                <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <!-- fin section restaurants : card 1 : La palette du goût -->
+                    <!-- section restaurants : card 2 : La note enchantée -->
+                    <div class="card">
+                        <div class="card__new">
+                            <p>Nouveau</p>
+                        </div>
+                        <div class="card__img"><img src="C:/Users/1/ohmyfood/images/note-enchantee.jpg" alt="La note enchantée"></div>
+                        <div class="card__text">
+                            <h3 class="card__title">La note enchantée</h3>
+                            <p class="card__city-name">Charonne</p>
+                        </div>
+                        <div class="card__heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <!-- fin section restaurants : card 2 : La note enchantée -->
+                    <!-- section restaurants : card 3 : À la française -->
+                    <div class="card">
+                        <div class="card__new">
+                            <p>Nouveau</p>
+                        </div>
+                        <div class="card__img"><img src="C:/Users/1/ohmyfood/images/a-la-francaise.jpg" alt="À la française"></div>
+                        <div class="card__text">
+                            <h3 class="card__title">À la française</h3>
+                            <p class="card__city-name">Cité Rouge</p>
+                        </div>
+                        <div class="card__heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <!-- fin section restaurants : card 3 : À la française -->
+                    <!-- section restaurants : card 4 : Le délice des sens -->
+                    <div class="card">
+                        <div class="card__new">
+                            <p>Nouveau</p>
+                        </div>
+                        <div class="card__img"><img src="C:/Users/1/ohmyfood/images/delices-du-sens.jpg" alt="Le délice des sens"></div>
+                        <div class="card__text">
+                            <h3 class="card__title">Le délice des sens</h3>
+                            <p class="card__city-name">Folie-Méricourt</p>
+                        </div>
+                        <div class="card__heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <!-- fin section restaurants : card 4 : Le délice des sens -->
+                </div>
+                <!-- fin section restaurants : boxes : toutes les cards -->
+            </div>
+            <!-- fin section restaurants :container cards -->
+        </section>
+        <!--fin section restaurants -->
+    </main>
+    <!--fin  main container -->
+    <!-- footer -->
+    <footer>
+        <!-- footer : titre -->
+        <h2 class="footer__title"></h2>
+        <!-- fin footer : titre -->
+        <!-- footer : liste -->
+        <ul class="footer__list">
+            <!-- footer : élément 1 : proposer un restaurant -->
+            <li class="footer__list__element">
+                <a href="#"> 
+                    <i class="fa-solid fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </a>
+            </li>
+            <!--fin footer : élément 1 : proposer un restaurant -->
+            <!-- footer : élément 2 : devenir partenaire -->
+            <li class="footer__list__element">
+                <a href="#"> 
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <p>Devenir partenaire</p>
+                </a>
+            </li>
+            <!-- fin footer : élément 2 : devenir partenaire -->
+            <!-- footer : élément 3 : mentions légales -->
+            <li class="footer__list__element">
+                <a href="#"> 
+                    <p>Mentions légales</p>
+                </a>
+            </li>
+            <!--fin footer : élément 3 : mentions légales -->
+            <!-- footer : élément 4 : contact -->
+            <li class="footer__list__element">
+                <p>Contact</p>
+            </li>
+            <!-- fin footer : élément 4 : contact -->
+        </ul>
+        <!-- fin footer : liste -->
+    </footer>
+    <!--fin footer -->
+</body>
+<!--fin  body -->
+</html>
