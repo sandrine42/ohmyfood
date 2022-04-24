@@ -1,0 +1,20 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "site mobil first de commande de repas en ligne",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./sass/main.scss:./public/css/style.css --style expanded",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandrine42/ohmyfood.git"
+  },
+  "author": "sandrine42",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandrine42/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/sandrine42/ohmyfood#readme"
+}

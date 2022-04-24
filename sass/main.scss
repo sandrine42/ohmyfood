@@ -1,0 +1,462 @@
+$color-1:#9356DC;
+$color-2:#FF79DA;
+$color-3:#99E2D0;
+$color-4:white;
+$color-5:black;
+$color-6:hsl(0, 0%, 50%);
+$color-7:hsl(0, 0%, 96%);
+$color-8:hsl(0, 0%, 92%);
+$color-9:hsl(0, 0%, 30%);
+$color-10:hsl(0, 0%, 20%);
+$color-11:hsl(267, 66%, 95%);
+$color-12:hsl(165, 56%, 35%);
+
+/*variables couleurs
+
+	color-1: #9356DC
+						font .method__step-btn:hover i
+						background .method__number
+						backround (gradient) .presentation__btn
+
+	color-2: #FF79DA
+						background .presentation__btn (Old browsers)
+						backround (gradient) .presentation__btn
+	color-3 : #99E2D0
+						background .card__new
+
+	color-4 : white
+						background header
+								   .method
+								   .card
+						font .presentation__btn
+							 .method__number
+							 footer
+							 .footer__title
+							 .footer__list__element a
+						
+ 	color-5 : black
+						font .logo
+							 .search__city
+							 .restaurant__boxes__card a
+						font border .card__heart i
+
+	color-6 : hsl(0, 0%, 50%)
+
+						font .presentation__text
+							 .method i
+
+	color-7 : hsl(0, 0%, 96%)
+
+						background .presentation
+								   .method__step-btn
+								   .restaurants
+
+	color-8 : hsl(0, 0%, 92%)
+
+						background .search
+								   .search__city
+
+	$color-9:hsl(0, 0%, 30%)
+
+						box-shadow .presentation__btn
+									.method__step-btn
+									.card
+						background footer
+
+	color-10:hsl(0, 0%, 20%)
+
+						box-shadow .presentation__btn:hover
+
+	*/
+
+$font-logo:"Shrikhand", cursive;
+$font-text:'Roboto';
+	
+body
+{
+	width: 100%;
+	box-sizing: content-box;
+	margin: auto;
+	font-family: 'Roboto';
+	overflow-x: hidden;
+}
+header
+{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	background-color: $color-4;
+}
+.logo
+{
+	margin-top: 20px;
+	font-family: "Shrikhand", cursive;
+	font-size: 40px;
+	font-weight: 400;
+	color: $color-5;
+	text-align: center;
+}
+.search
+{
+	background-color: $color-8;
+	display: flex;
+	height: 45px;
+	box-shadow: inset 0em 0.15em 2px 0px $color-9;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	&__picto {
+		font-size: 20px;
+	}
+	&__city {
+		max-width: 150px;
+		font-size: 18px;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 500;
+		color: $color-5;
+		text-align: center;
+		background-color: $color-8;
+		border: none;
+	}
+}
+.presentation
+{
+	margin: 0px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	background-color:$color-7;
+	&__title
+	{
+		font-size: 28px;
+		font-weight: 700;
+		width: 80%;
+		margin: 30px 0px 15px 0px;
+	}
+	&__text
+	{
+		color: $color-6;
+		font-size: 18px;
+		width: 90%;
+		margin-bottom: 15px;
+	}
+	&__btn
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		width: 190px;
+		border: none;
+		border-radius: 30px;
+		padding: 15px;
+		color: $color-4;
+		background: $color-2;
+		background: -moz-linear-gradient(top,  $color-2 0%, $color-1 100%);
+		background: -webkit-linear-gradient(top,  $color-2 0%,$color-1 100%);
+		background: linear-gradient(to bottom,  $color-2 0%,$color-1 100%);
+		filter: progid;
+		box-shadow: 0px 1px 10px $color-9;
+		margin: 25px 0px 40px 0px;
+		cursor: pointer;
+		&:hover
+		{
+			-webkit-filter: brightness(1.1);
+			filter: brightness(1.1);
+			-webkit-box-shadow: 0px 1px 10px $color-10;
+			box-shadow: 0px 1px 10px $color-10;
+		}
+	}
+}
+.method
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 40px;
+	background-color: $color-4;
+	&__title {
+		font-size: 20px;
+		font-weight: 700;
+		margin: 40px 0px 20px 20px;
+	}
+	&__step {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		justify-content: space-around;
+		&-btn {
+			display: flex;
+			align-items: center;
+			border-radius: 20px;
+			min-height: 80px;
+			width: 25%;
+			background-color: $color-7;
+			box-shadow: 2px 2px 10px $color-9;
+			margin-bottom: 20px;
+			margin-left: 5px;
+			&:hover {
+				background-color: $color-11;
+				cursor: pointer;
+				i {
+					color: $color-1;
+				}
+			}
+		}
+
+	}
+	&__number {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: -10px;
+		margin-right: 10px;
+		background-color: #9356dc;
+		font-size: 15px;
+		color: $color-4;
+		min-width: 25px;
+		min-height: 25px;
+		border-radius: 100%;
+	}
+	i {
+		font-size: 18px;
+		color:$color-6;
+		margin-right: 20px;
+	}
+	p {
+		font-weight: 500;
+	}
+}
+.restaurants
+{
+	background-color: $color-7;
+	padding-bottom: 55px;
+	padding-top: 10px;
+	&__title {
+		font-size: 20px;
+		font-weight: 700;
+		margin: 40px 0px 20px 20px;
+	}
+}
+.card__new
+{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color:$color-3;
+	color: $color-12;
+	width: 100px;
+	height: 35px;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: 500;
+}
+.restaurant__boxes__card
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	a {
+		text-decoration: none;
+		color: $color-5;
+	}
+}
+.card
+{
+	position: relative;
+	width: 550px;
+	display: flex;
+	flex-direction: column;
+	background-color: $color-4;
+	border-radius: 20px;
+	box-shadow: 2px 2px 10px hsl(0, 0%, 30%);
+	margin: 20px;
+	&__picture
+	{
+		width: 100%;
+		height: 320px;
+		img
+		{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: 0% 60%;
+			border-radius: 20px 20px 0px 0px;
+		}
+	}
+	&__text
+	{
+		position: relative;
+		margin: 5px 10px 5px 10px;
+	}
+	&__heart
+	{
+		position: absolute;
+		top: 330px;
+		right: 20px;
+		font-size: 25px;
+		font-weight: 500;
+		i
+		{
+			color: transparent;
+			-webkit-text-stroke: 2px $color-5;
+			color: text-shadow;
+			color: $color-4;
+		}
+	}
+	&__title
+	{
+		font-size: 18px;
+		font-weight: 700;
+		margin: 5px;
+	}
+	&__city-name
+	{
+		font-size: 16px;
+		font-weight: 400;
+		margin: 5px;
+	}
+}
+footer
+{
+	text-decoration: none;
+	color: $color-4;
+	font-weight: 400;
+	background-color: $color-9;
+	display: flex;
+	flex-direction: column;
+}
+.footer__title
+{
+	margin: 20px;
+	font-family: "Shrikhand", cursive;
+	font-size: 30px;
+	color: $color-4;
+	font-weight: 100;
+	text-align: center;
+}
+.footer__list
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+	&__element {
+		margin: 0;
+		padding: 0;
+		a {
+			display: flex;
+			text-decoration: none;
+			color: $color-4;
+			font-weight: 400;
+			flex-direction: row;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+		}
+		i {
+			width: 20px;
+			height: 20px;
+			font-size: 18px;
+			margin: 0px 0px 20px 20px;
+		}
+		p {
+			font-size: 18px;
+			margin: 0px 20px 20px 20px;
+		}
+	}
+}
+@media only screen and (max-width: 767px)
+{	
+	body
+{
+	box-sizing: content-box;
+	max-width: 767px;
+	width: 100%;
+	margin: auto;
+	font-family: 'Roboto';
+	overflow-x: hidden;
+}
+.method__step
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	&-btn
+{
+	display: flex;
+	align-items: center;
+	border-radius: 20px;
+	min-height: 80px;
+	width: 90%;
+	background-color: $color-7;
+	box-shadow: 2px 2px 10px $color-9;
+	margin-bottom: 20px;
+	margin-left: 5px;
+}
+}
+.restaurant__boxes__card
+{
+		display: flex;
+		flex-direction: column;
+		a
+		{
+			display: flex;
+			flex-direction:column;
+			align-items: center;
+		}
+}
+	.card
+{
+		position: relative;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		background-color: $color-4;
+		border-radius: 20px;
+		box-shadow: 2px 2px 10px $color-9;
+		margin: 10px 20px 10px 20px;
+		&__picture
+	{
+		width: 100%;
+		height: 210px;
+	}
+	&__heart 
+	{
+		position: absolute;
+		top: 218px;
+		right: 20px;
+		font-size: 25px;
+		font-weight: 500;
+	}
+}
+
+	.footer__title
+	{
+		margin: 20px;
+		font-family: "Shrikhand", cursive;
+		font-size: 20px;
+		color: $color-4;
+		font-weight: 100;
+		text-align: start;
+	}
+	.footer__list
+	{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+	}
+}
