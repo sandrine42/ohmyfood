@@ -402,8 +402,9 @@ header {
 }
 
 .card__text {
+  width: 100%;
   position: relative;
-  margin: 5px 10px 5px 10px;
+  margin: 5px 0px 5px 10px;
 }
 
 .card__heart {
@@ -412,18 +413,70 @@ header {
   right: 20px;
   font-size: 25px;
   font-weight: 500;
+  width: 40px;
+  height: 40px;
+  text-align: center;
 }
 
-.card__heart i {
+.card__heart__empty {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  width: 30px;
+}
+
+.card__heart__empty i {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   -webkit-text-fill-color: transparent;
 }
 
-.card__heart i:hover {
-  -webkit-animation: remplissage-coeur 2s ease 0s 4 normal both;
-  animation: remplissage-coeur 2s ease 0s 4 normal both;
-  -webkit-text-stroke: 0px transparent;
+.card__heart__empty:hover {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  width: 30px;
+}
+
+.card__heart__empty:hover i {
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.card__heart__full {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  width: 30px;
+}
+
+.card__heart__full i {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
+}
+
+.card__heart__full:hover {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  width: 30px;
+}
+
+.card__heart__full:hover i {
+  -webkit-animation: anim-heart 1s linear 0s 1 normal forwards;
+  animation: anim-heart 1s linear 0s 1 normal forwards;
+  /* Couleur de secours pour les vieux navigateurs */
+  background-color: #9356DC;
+  /* Mozilla Firefox */
+  /* Opera */
+  /* WebKit (Safari 4+, Chrome 1+) */
+  /* WebKit (Chrome 11+) */
+  /* IE10 */
+  /* W3C */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  cursor: copy;
 }
 
 .card__title {
@@ -555,6 +608,9 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .restaurant__boxes__card a {
     display: -webkit-box;
@@ -695,9 +751,11 @@ header a {
   width: 100%;
   background-color: whitesmoke;
   border-radius: 35px 35px 0 0;
+  /*animation heart*/
 }
 
 .menu__title {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,75 +774,75 @@ header a {
 }
 
 .menu__picto {
-  font-size: 23px;
-  font-weight: 200;
-  color: transparent;
-  -webkit-text-stroke: 2px black;
-}
-
-.menu__circle-check {
   position: absolute;
-  right: 0px;
-  width: 60px;
-  height: 100%;
-  font-size: 22px;
-  border-radius: 0 10px 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #99E2D0;
-  color: white;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
+  top: 20px;
+  right: 265px;
+  font-size: 25px;
+  font-weight: 500;
 }
 
-.menu:hover .plat__prix {
-  padding-right: 60px;
+.menu__picto__empty {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  width: 30px;
 }
 
-.menu:hover .plat__circle-check {
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
-  cursor: pointer;
+.menu__picto__empty i {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: transparent;
 }
 
-.menu:hover .plat__circle-check i {
-  -webkit-animation: check-rotation 0.6s both;
-  animation: check-rotation 0.6s both;
-  cursor: pointer;
+.menu__picto__empty:hover {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  width: 30px;
 }
 
-.menu:hover .info__nom {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
+.menu__picto__empty:hover i {
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
-.menu:hover .info__description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
+.menu__picto__full {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  width: 30px;
 }
 
-.menu i {
-  -webkit-animation: check-rotation 0.6s both;
-  animation: check-rotation 0.6s both;
-  cursor: pointer;
+.menu__picto__full i {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: transparent;
 }
 
-.carte {
+.menu__picto__full:hover {
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  width: 30px;
+}
+
+.menu__picto__full:hover i {
+  -webkit-animation: anim-heart 1s linear 0s 1 normal forwards;
+  animation: anim-heart 1s linear 0s 1 normal forwards;
+  /* Couleur de secours pour les vieux navigateurs */
+  background-color: #9356DC;
+  /* Mozilla Firefox */
+  /* Opera */
+  /* WebKit (Safari 4+, Chrome 1+) */
+  /* WebKit (Chrome 11+) */
+  /* IE10 */
+  /* W3C */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  cursor: copy;
+}
+
+.menu .carte {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -797,7 +855,7 @@ header a {
       justify-content: space-around;
 }
 
-.carte-box {
+.menu .carte-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -810,7 +868,7 @@ header a {
   width: 30%;
 }
 
-.carte-box__title {
+.menu .carte-box__title {
   margin: 25px 0px 10px 5px;
   padding-bottom: 5px;
   /*
@@ -821,7 +879,7 @@ header a {
   border-bottom: solid #99E2D0;
 }
 
-.plats-box {
+.menu .plats-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -832,8 +890,7 @@ header a {
           flex-direction: column;
 }
 
-.plat {
-  position: relative;
+.menu .plat {
   width: 100%;
   margin: 10px auto 10px auto;
   background-color: white;
@@ -841,22 +898,22 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   -webkit-box-shadow: 0px 1px 2px 0px rgba(77, 77, 77, 0.4), 0px 2px 6px 2px rgba(77, 77, 77, 0.4);
   box-shadow: 0px 1px 2px 0px rgba(77, 77, 77, 0.4), 0px 2px 6px 2px rgba(77, 77, 77, 0.4);
-  overflow: hidden;
   -webkit-animation: apparition 1.5s forwards;
   animation: apparition 1.5s forwards;
   opacity: 0;
-  /*&:hover
-	{
-	background-color: $color-11;
-	}*/
+  overflow: hidden;
 }
 
-.plat__info {
+.menu .plat__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -865,16 +922,84 @@ header a {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 10px;
-  width: 75%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 270px;
+  -webkit-box-flex: 1;
+          flex: 1 0 0px;
+  -ms-flex: 1 0 0px;
 }
 
-.plat__prix {
+.menu .plat__prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
-  bottom: 14px;
-  right: 25px;
+  bottom: 0px;
+  right: 0px;
+  font-weight: 700;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 75px;
+  height: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  transition-property: right;
+  -webkit-transition-property: right;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.menu .plat__circle-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0px;
+  width: 70px;
+  height: 100%;
+  font-size: 22px;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  transition-property: right;
+  -webkit-transition-property: right;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  right: -70px;
+}
+
+.menu .plat__circle-check i {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.menu .plat:hover .plat__prix {
+  transition-property: right;
+  -webkit-transition-property: right;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -882,115 +1007,63 @@ header a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  cursor: pointer;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  -ms-flex-preferred-size: 0%;
-      flex-basis: 0%;
-  font-weight: 700;
-  font-size: 15px;
-  font-weight: 500;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
+  right: 75px;
 }
 
-.plat__circle-check {
-  position: absolute;
-  right: 0px;
-  width: 60px;
-  height: 100%;
-  font-size: 22px;
-  border-radius: 0 10px 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #99E2D0;
-  color: white;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
-}
-
-.plat:hover .plat__prix {
-  padding-right: 60px;
-}
-
-.plat:hover .plat__circle-check {
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
+.menu .plat:hover .plat__circle-check {
+  right: 0;
   cursor: pointer;
 }
 
-.plat:hover .plat__circle-check i {
-  -webkit-animation: check-rotation 0.6s both;
-  animation: check-rotation 0.6s both;
+.menu .plat:hover .plat__circle-check i {
+  transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
   cursor: pointer;
 }
 
-.plat:hover .info__nom {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-}
-
-.plat:hover .info__description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-}
-
-.plat:nth-child(2) {
+.menu .plat:nth-child(2) {
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
 
-.plat:nth-child(3) {
+.menu .plat:nth-child(3) {
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
-.plat:nth-child(4) {
+.menu .plat:nth-child(4) {
   -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s;
 }
 
-.info__nom {
+.menu .info__nom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 700;
   font-size: 16px;
   margin: 4px 0px 4px 0px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.info__description {
+.menu .info__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-weight: 400;
   font-size: 14px;
+  width: 265px;
   margin: 4px 0px 4px 0px;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.btn-commander {
+.menu .btn-commander {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1023,7 +1096,7 @@ header a {
   cursor: pointer;
 }
 
-.btn-commander:hover {
+.menu .btn-commander:hover {
   -webkit-filter: brightness(1.1);
   filter: brightness(1.1);
   /*-webkit-box-shadow: 0px 1px 10px $color-10;*/
@@ -1031,7 +1104,7 @@ header a {
   box-shadow: 0px 1px 2px 0px rgba(77, 77, 77, 0.4), 0px 2px 6px 2px rgba(77, 77, 77, 0.9);
 }
 
-footer {
+.menu footer {
   text-decoration: none;
   color: white;
   font-weight: 400;
@@ -1045,7 +1118,7 @@ footer {
           flex-direction: column;
 }
 
-.footer__title {
+.menu .footer__title {
   margin: 20px;
   font-family: "Shrikhand", cursive;
   font-size: 30px;
@@ -1054,7 +1127,7 @@ footer {
   text-align: center;
 }
 
-.footer__list {
+.menu .footer__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1065,12 +1138,12 @@ footer {
       justify-content: space-around;
 }
 
-.footer__list__element {
+.menu .footer__list__element {
   margin: 0;
   padding: 0;
 }
 
-.footer__list__element a {
+.menu .footer__list__element a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1088,20 +1161,20 @@ footer {
   padding: 0;
 }
 
-.footer__list__element i {
+.menu .footer__list__element i {
   width: 20px;
   height: 20px;
   font-size: 18px;
   margin: 0px 0px 20px 20px;
 }
 
-.footer__list__element p {
+.menu .footer__list__element p {
   font-size: 18px;
   margin: 0px 20px 20px 20px;
 }
 
 @media only screen and (max-width: 767px) {
-  body {
+  .menu body {
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
     max-width: 767px;
@@ -1110,7 +1183,7 @@ footer {
     font-family: "Roboto";
     overflow-x: hidden;
   }
-  .carte {
+  .menu .carte {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1120,7 +1193,7 @@ footer {
             flex-direction: column;
     width: 95%;
   }
-  .carte-box {
+  .menu .carte-box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1132,7 +1205,14 @@ footer {
         flex-wrap: nowrap;
     width: 100%;
   }
-  .footer__title {
+  .menu .menu__picto {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .menu .footer__title {
     margin: 20px;
     font-family: "Shrikhand", cursive;
     font-size: 20px;
@@ -1140,7 +1220,7 @@ footer {
     font-weight: 100;
     text-align: start;
   }
-  .footer__list {
+  .menu .footer__list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -1206,207 +1286,135 @@ footer {
   }
 }
 
-@-webkit-keyframes check-rotation {
+@keyframes anim-heart {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    margin: 0;
+    opacity: 0.1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
   20% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    margin: 0 2rem;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes check-rotation {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    margin: 0;
-  }
-  20% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    margin: 0 2rem;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes remplissage-coeur {
-  0% {
-    opacity: 0.25;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
+    opacity: .20;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
   }
-  25% {
-    opacity: .33;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
+  40% {
+    opacity: .40;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
   }
-  50% {
-    opacity: .50;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
+  60% {
+    opacity: .60;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
   }
-  75% {
-    opacity: .75;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
+  80% {
+    opacity: .80;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  80%, 100% {
+    opacity: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
   100% {
     opacity: 1;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
-  /*
-@-webkit-keyframes remplissage-coeur
-{
-    0%
-    {
-		opacity: 0;
-		color: transparent;
-		-webkit-text-stroke-width: 0px;
-		background: -webkit-gradient(linear, left top, left bottom, from($color-2), to($color-1));
-		background: linear-gradient($color-2, $color-1);
-		-webkit-background-clip: text;
-		background-clip: text;
-    }
-
-    100%
-    {
-	opacity: 1;
-	background: -webkit-gradient(linear, left top, left bottom, from($color-2), to($color-1));
-	background: linear-gradient($color-2, $color-1);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-stroke-width: 0px;
-    }
-}
-@keyframes remplissage-coeur
-{
-    0% {
-	opacity: 0;
-	color: transparent;
-	-webkit-text-stroke-width: 0px;
-	background: -webkit-gradient(linear, left top, left bottom, from($color-2), to($color-1));
-	background: -o-linear-gradient($color-2, $color-1);
-	background: linear-gradient($color-2, $color-1);
-	-webkit-background-clip: text;
-	background-clip: text;
-}
-100%
-{
- 
-	opacity: 1;
-	background: -webkit-gradient(linear, left top, left bottom, from($color-2), to($color-1));
-	background: -o-linear-gradient($color-2, $color-1);
-	background: linear-gradient($color-2, $color-1);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-stroke-width: 0px;
-}*/
 }
 
-@keyframes remplissage-coeur {
+@-webkit-keyframes anim-heart {
   0% {
-    opacity: 0.25;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
+    opacity: 0.1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
-  25% {
-    opacity: .33;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
+  20% {
+    opacity: .20;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
   }
-  50% {
-    opacity: .50;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
+  40% {
+    opacity: .40;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
   }
-  75% {
-    opacity: .75;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
+  60% {
+    opacity: .60;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+  80% {
+    opacity: .80;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  80%, 100% {
+    opacity: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
   100% {
     opacity: 1;
-    background: -webkit-gradient(linear, left bottom, left top, from(#E16FDA), color-stop(43%, #E270DA), color-stop(70%, #A55CDB), to(#AB65ED));
-    background: linear-gradient(to top, #E16FDA 0%, #E270DA 43%, #A55CDB 70%, #AB65ED 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
-  /*
-@-webkit-keyframes remplissage-coeur
-{
-    0%
-    {
-		opacity: 0;
-		color: transparent;
-		-webkit-text-stroke-width: 0px;
-		background: -webkit-gradient(linear, left top, left bottom, from($color-2), to($color-1));
-		background: linear-gradient($color-2, $color-1);
-		-webkit-background-clip: text;
-		background-clip: text;
-    }
-
-    100%
-    {
-	opacity: 1;
-	background: -webkit-gradient(linear, left top, left bottom, from($color-2), to($color-1));
-	background: linear-gradient($color-2, $color-1);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-stroke-width: 0px;
-    }
-}
-@keyframes remplissage-coeur
-{
-    0% {
-	opacity: 0;
-	color: transparent;
-	-webkit-text-stroke-width: 0px;
-	background: -webkit-gradient(linear, left top, left bottom, from($color-2), to($color-1));
-	background: -o-linear-gradient($color-2, $color-1);
-	background: linear-gradient($color-2, $color-1);
-	-webkit-background-clip: text;
-	background-clip: text;
-}
-100%
-{
- 
-	opacity: 1;
-	background: -webkit-gradient(linear, left top, left bottom, from($color-2), to($color-1));
-	background: -o-linear-gradient($color-2, $color-1);
-	background: linear-gradient($color-2, $color-1);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-stroke-width: 0px;
-}*/
 }
 /*# sourceMappingURL=main.css.map */
