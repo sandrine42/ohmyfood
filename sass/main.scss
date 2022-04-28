@@ -752,54 +752,103 @@ header {
 	width: 100%;
 	flex-direction: column;
 }
-.plat {
-
+.plat
+{
+	position: relative;
 	width: 100%;
 	margin: 10px auto 10px auto;
 	background-color: $color-4;
 	@include radius(10px) ;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: flex-start;
 	@include box-shadow($shadow);
 	-webkit-animation: apparition 1.5s forwards;
 	animation: apparition 1.5s forwards;
 	opacity: 0;
 	overflow: hidden;
-	&__info {
+	&:hover .plat__circle-check {
+		-webkit-transform: translateX(0%);
+			-ms-transform: translateX(0%);
+				transform: translateX(0%);
+		-webkit-transition: 0.4s ease;
+		-o-transition: 0.4s ease;
+		transition: 0.4s ease;
+		cursor: pointer;
+	  }
+	  &:hover .plat__prix
+  {
+    padding-right: 60px;
+  }
+  &:hover .plat__circle-check i
+  {
+	  transform:rotate(360deg);
+	  -ms-transform:rotate(360deg);
+	  -webkit-transform:rotate(360deg);
+  }
+	&__info
+		{
 		display: flex;
 		flex-direction: column;
 		margin: 10px;
-		width: 270px;
-		flex : 1 0 0px;
-		-ms-flex : 1 0 0px; 
-	}
-	&__prix {
-				display: flex;
-				flex-direction: row;
-    			position: absolute;
-    			bottom: 0px;
-    			right: 0px;
-    			font-weight: 700;
-    			font-size: 15px;
-    			font-weight: 500;
-    			cursor: pointer;
-    			width: 75px;
-    			height: 45px;
-    			align-items: center;
-    			align-content: flex-end;
-    			justify-content: center;
-				transition-property: right;
-				-webkit-transition-property: right;
-				transition-duration: 1s;
-				transition-timing-function: ease-in-out;
-			
-	}
-	&__circle-check {
+		width: 95%;
+		}
+	&__nom
+		{
 		display: flex;
+		font-weight: 700;
+		font-size: 16px;
+		margin: 4px 0px 4px 0px;
+		&:hover
+		{
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			cursor: pointer;
+		}
+		}
+	&__description-prix
+		{
+			width: 95%;
+			display: flex;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+	&__description
+		{
+			font-weight: 400;
+			font-size: 14px;
+			width: 265px;
+			margin: 4px 0px 4px 0px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			flex: 3;
+		}
+	&__prix
+		{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:nowrap; 
+    font-weight: 700;
+    font-size: 15px;
+    font-weight: 500;
+	margin:0;
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+
+		}
+
+	&__circle-check
+	{
 		position: absolute;
+		top: 0;
 		right: 0px;
-		width: 70px;
+		width: 75px;
 		height: 100%;
 		font-size: 22px;
 		overflow: hidden;
@@ -809,38 +858,21 @@ header {
 		align-items: center;
 		background-color: $color-3;
 		color: $color-4;
-		transition-property: right;
-		-webkit-transition-property: right;
-		transition-duration: 1s;
-		transition-timing-function: ease-in-out;
-		right: -70px;
+		-webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
 
-		i{
+		i
+		{
 			-webkit-transition: -webkit-transform 1s ease-in-out;
 			-ms-transition: -ms-transform 1s ease-in-out;
 			transition: transform 1s ease-in-out; 
 		}
 	}
 
-	&:hover .plat__prix {
-		transition-property: right;
-		-webkit-transition-property: right;
-		transition-duration: 1s;
-		transition-timing-function: ease-in-out;
-		display: flex;
-		flex-direction: row;
-		right:75px;
-	}
-	&:hover .plat__circle-check {
-		right: 0;
-		cursor: pointer;
-		i {
-			transform:rotate(360deg);
-			-ms-transform:rotate(360deg);
-			-webkit-transform:rotate(360deg);
-			cursor: pointer;
-		}
-	}
 	&:nth-child(2) {
 		-webkit-animation-delay: 0.4s;
 		animation-delay: 0.4s;
@@ -854,23 +886,7 @@ header {
 		animation-delay: 1.2s;
 	}
 }
-.info__nom {
-	display: flex;
-	font-weight: 700;
-	font-size: 16px;
-	margin: 4px 0px 4px 0px;
-}
-.info__description {
-	display: flex;
-	flex-direction: row;
-    font-weight: 400;
-    font-size: 14px;
-    width: 265px;
-    margin: 4px 0px 4px 0px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+
 .btn-commander {
 	display: flex;
 	justify-content: center;
@@ -1023,6 +1039,7 @@ body
     transform: translateY(0);
     }
 }
+/*
 @-webkit-keyframes slide
 {
     0%
@@ -1049,7 +1066,7 @@ body
               transform: translateX(-5em);
       display: contents;
     }
-  }
+  }*/
 
 /*animation heart*/
 

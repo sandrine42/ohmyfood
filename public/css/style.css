@@ -621,6 +621,34 @@ header a {
   -ms-border-radius: 35px 35px 0 0;
   -o-border-radius: 35px 35px 0 0;
   border-radius: 35px 35px 0 0;
+  /*
+  @-webkit-keyframes slide
+  {
+      0%
+      {
+  	-webkit-transform: translateX(0);
+  	transform: translateX(0);
+  	display: contents;
+      }
+      100%
+      {
+  	-webkit-transform: translateX(-5em);
+  	transform: translateX(-5em);
+  	display: contents;
+      }
+  }
+  @keyframes slide {
+      0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        display: contents;
+      }
+      100% {
+        -webkit-transform: translateX(-5em);
+                transform: translateX(-5em);
+        display: contents;
+      }
+    }*/
   /*animation heart*/
 }
 .menu__title {
@@ -727,6 +755,7 @@ header a {
   flex-direction: column;
 }
 .menu .plat {
+  position: relative;
   width: 100%;
   margin: 10px auto 10px auto;
   background-color: white;
@@ -736,7 +765,7 @@ header a {
   -o-border-radius: 10px;
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   -webkit-box-shadow: 0px 1px 2px 0px rgba(77, 77, 77, 0.4), 0px 2px 6px 2px rgba(77, 77, 77, 0.4);
   -moz-box-shadow: 0px 1px 2px 0px rgba(77, 77, 77, 0.4), 0px 2px 6px 2px rgba(77, 77, 77, 0.4);
@@ -746,39 +775,77 @@ header a {
   opacity: 0;
   overflow: hidden;
 }
+.menu .plat:hover .plat__circle-check {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.menu .plat:hover .plat__prix {
+  padding-right: 60px;
+}
+.menu .plat:hover .plat__circle-check i {
+  transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
 .menu .plat__info {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  width: 270px;
-  flex: 1 0 0px;
-  -ms-flex: 1 0 0px;
+  width: 95%;
+}
+.menu .plat__nom {
+  display: flex;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 4px 0px 4px 0px;
+}
+.menu .plat__nom:hover {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.menu .plat__description-prix {
+  width: 95%;
+  display: flex;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.menu .plat__description {
+  font-weight: 400;
+  font-size: 14px;
+  width: 265px;
+  margin: 4px 0px 4px 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 3;
 }
 .menu .plat__prix {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
+  flex-wrap: nowrap;
   font-weight: 700;
   font-size: 15px;
   font-weight: 500;
-  cursor: pointer;
-  width: 75px;
-  height: 45px;
-  align-items: center;
-  align-content: flex-end;
-  justify-content: center;
-  transition-property: right;
-  -webkit-transition-property: right;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+  margin: 0;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 .menu .plat__circle-check {
-  display: flex;
   position: absolute;
+  top: 0;
   right: 0px;
-  width: 70px;
+  width: 75px;
   height: 100%;
   font-size: 22px;
   overflow: hidden;
@@ -792,35 +859,17 @@ header a {
   align-items: center;
   background-color: #99E2D0;
   color: white;
-  transition-property: right;
-  -webkit-transition-property: right;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
-  right: -70px;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 .menu .plat__circle-check i {
   -webkit-transition: -webkit-transform 1s ease-in-out;
   -ms-transition: -ms-transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
-}
-.menu .plat:hover .plat__prix {
-  transition-property: right;
-  -webkit-transition-property: right;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
-  display: flex;
-  flex-direction: row;
-  right: 75px;
-}
-.menu .plat:hover .plat__circle-check {
-  right: 0;
-  cursor: pointer;
-}
-.menu .plat:hover .plat__circle-check i {
-  transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  cursor: pointer;
 }
 .menu .plat:nth-child(2) {
   -webkit-animation-delay: 0.4s;
@@ -833,23 +882,6 @@ header a {
 .menu .plat:nth-child(4) {
   -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s;
-}
-.menu .info__nom {
-  display: flex;
-  font-weight: 700;
-  font-size: 16px;
-  margin: 4px 0px 4px 0px;
-}
-.menu .info__description {
-  display: flex;
-  flex-direction: row;
-  font-weight: 400;
-  font-size: 14px;
-  width: 265px;
-  margin: 4px 0px 4px 0px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .menu .btn-commander {
   display: flex;
@@ -1005,30 +1037,6 @@ header a {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes slide {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    display: contents;
-  }
-  100% {
-    -webkit-transform: translateX(-5em);
-    transform: translateX(-5em);
-    display: contents;
-  }
-}
-@keyframes slide {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    display: contents;
-  }
-  100% {
-    -webkit-transform: translateX(-5em);
-    transform: translateX(-5em);
-    display: contents;
   }
 }
 @keyframes anim-heart {
