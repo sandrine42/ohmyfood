@@ -1,0 +1,62 @@
+/*@mixin linear-gradient*/
+@mixin linear-gradient($from, $to)
+{
+/* Couleur de secours pour les vieux navigateurs */
+background-color: $to;
+/* Mozilla Firefox */
+background-image: -moz-linear-gradient($from, $to);
+/* Opera */
+background-image: -o-linear-gradient($from, $to);
+/* WebKit (Safari 4+, Chrome 1+) */
+background-image: -webkit-gradient(linear, » left top, left bottom, color-stop(0, $from),»
+color-stop(1, $to));
+/* WebKit (Chrome 11+) */
+background-image: -webkit-linear-gradient($from, $to);
+/* IE10 */ background-image: -ms-linear-gradient($from, $to);
+/* W3C */ background-image: linear-gradient($from, $to);
+}
+
+/*@mixin border-radius*/
+
+@mixin radius($radius)
+{
+-webkit-border-radius: $radius;
+-moz-border-radius: $radius;
+-ms-border-radius: $radius;
+-o-border-radius: $radius;
+border-radius: $radius
+}
+
+/*@mixin box-shadow*/
+
+@mixin box-shadow($shadow...)
+{
+	-webkit-box-shadow: $shadow;
+	   -moz-box-shadow: $shadow;       
+			box-shadow: $shadow;
+}
+
+@mixin box-dark-shadow($dark-shadow...)
+{
+	-webkit-box-shadow: $dark-shadow;
+	   -moz-box-shadow: $dark-shadow;       
+			box-shadow: $dark-shadow;
+}
+
+@mixin box-search-shadow($search-shadow...)
+{
+	-webkit-box-shadow: $shadow;
+	   -moz-box-shadow: $shadow;       
+			box-shadow: $shadow;
+}
+
+/*@mixin loader*/
+
+@mixin delay($rule, $number, $value) {
+	@for $i from 1 to ($number + 1) {
+	  &:nth-child(#{$i}) {
+		-webkit-#{$rule}-delay: (#{$i*$value});
+		#{$rule}-delay: (#{$i*$value});
+	  }
+	}
+  }

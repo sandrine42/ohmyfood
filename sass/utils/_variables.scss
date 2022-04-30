@@ -1,0 +1,98 @@
+/*variables couleurs
+
+	color-1: #9356DC
+						font .method__step-btn:hover i
+						background .method__number
+						backround (gradient) .presentation__btn
+
+	color-2: #FF79DA
+						background .presentation__btn (Old browsers)
+						backround (gradient) .presentation__btn
+	color-3 : #99E2D0
+						background .card__new
+
+	color-4 : white
+						background header
+								   .method
+								   .card
+						font .presentation__btn
+							 .method__number
+							 footer
+							 .footer__title
+							 .footer__list__element a
+						
+ 	color-5 : black
+						font .logo
+							 .search__city
+							 .restaurant__boxes__card a
+						font border .card__heart i
+
+	color-6 : hsl(0, 0%, 50%)
+
+						font .presentation__text
+							 .method i
+
+	color-7 : hsl(0, 0%, 96%)
+
+						background .presentation
+								   .method__step-btn
+								   .restaurants
+
+	color-8 : hsl(0, 0%, 92%)
+
+						background .search
+								   .search__city
+
+	$color-9:hsla(0, 0%, 30%, 0.9)
+
+						box-shadow .presentation__btn
+									.method__step-btn
+									.card
+	$color-10:hsla(0, 0%, 30%, 0.9)
+
+						box-shadow .presentation__btn:hover
+
+	$color-11:hsl(267, 66%, 95%)
+
+						background &:hover (.plat)
+
+	$color-12:hsl(165, 56%, 35%)
+
+						font .card__new
+
+	$color-13:hsl(0, 0%, 30%)
+						background footer
+
+	*/
+
+    $color-1:#9356DC;
+    $color-2:#FF79DA;
+    $color-3:#99E2D0;
+    $color-4:white;
+    $color-5:black;
+    $color-6:hsl(0, 0%, 50%);
+    $color-7:hsl(0, 0%, 96%);
+    $color-8:hsl(0, 0%, 92%);
+    $color-9:hsla(0, 0%, 30%, 0.4);
+    $color-10:hsla(0, 0%, 30%, 0.9);
+    $color-11:hsl(267, 66%, 95%);
+    $color-12:hsl(165, 56%, 35%);
+    $color-13:hsl(0, 0%, 30%);
+    
+    
+    /*variables fonts*/
+    $font-logo:"Shrikhand", cursive;
+    $font-text:'Roboto';
+    
+    
+    /*variables couleurs linear-gradient*/
+    $from:$color-2;
+    $to:$color-1;
+    
+    /*variables shadows*/
+    $shadow: 0px 1px 2px 0px $color-9, 0px 2px 6px 2px $color-9;
+    $dark-shadow: 0px 1px 2px 0px $color-9, 0px 2px 6px 2px $color-10;
+    $search-shadow:
+    hsla(240, 30%, 28%, 0.25) 0px 50px 100px -20px,
+    hsla(0, 0%, 0%, 0.3) 0px 30px 60px -30px,
+    hsla(210, 73%, 15%, 0.35) 0px -2px 6px 0px;

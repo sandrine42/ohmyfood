@@ -1,0 +1,24 @@
+/*body index et pages desktop et tablette min-width : 768px*/	
+body
+{
+	width: 100%;
+	box-sizing: content-box;
+	font-family: $font-text;
+	margin: auto;
+	overflow-x: hidden;
+}
+
+/*body index et pages mobil max-width: 767px*/
+@media only screen and (max-width : 767px)
+/* Styles */
+{
+body
+{
+	box-sizing: content-box;
+	max-width: 767px;
+	width: 100%;
+	margin: auto;
+	font-family: $font-text;
+	overflow-x: hidden;
+}
+}

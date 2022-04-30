@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public\css\normalize.css">
-    <link rel="stylesheet" href="public\css\style.css">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <title>ohmyfood-À la française</title>
 </head>
 <!-- body -->
@@ -20,10 +20,16 @@
     <!-- header -->
     <header>
         <!--  picto fléche retour index -->
-        <div class="header__picto"><i class="fa-solid fa-arrow-left"></i></div>
+        
+        <div class="header__picto">
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </div>
+        
         <!-- fin picto fléche retour index -->
         <!-- header logo -->
-        <h1 class="hearder__logo">ohmyfood</h1>
+        <h1 class="logo">ohmyfood</h1>
         <!--fin header logo -->
     </header>
     <!--fin header -->
@@ -31,7 +37,7 @@
     <main class="page-restaurant">
         <!-- photo restaurant la palette du goût -->
         <div class="page-restaurant__img">
-            <img src="C:\Users\1\ohmyfood\images\a-la-francaise.jpg" alt="À la française">
+            <img src="images/a-la-francaise.jpg" alt="À la française">
         </div>
         <!-- fin photo restaurant la palette du goût -->
         <!-- section menu du restaurant -->
@@ -42,9 +48,12 @@
                 <h2 class="menu__nom-restaurant">À la française</h2>
                 <!-- fin titre restaurant -->
                 <!-- picto coeur -->
+                <a href="#">
                 <div class="menu__picto">
-                    <i class="fa-solid fa-heart"></i>
+                    <p class="card__heart__empty"><i  class="fa-solid fa-heart"></i> </p>      
+                    <p class="card__heart__full"><i  class="fa-solid fa-heart"></i></p>  
                 </div>
+            </a>
                 <!--fin picto coeur -->
             </div>
             <!--fin nom du restaurant -->
@@ -55,24 +64,21 @@
                     <!-- titre entrées -->
                     <h3 class="carte-box__title">Entrées</h3>
                     <!--fin titre entrées -->
-                    <!-- barre dessous titre-->
-                    <div class="bottom-bar"></div>
-                    <!-- fin barre dessous titre-->
                     <!-- les différentes entrées-->
                     <div class="plats-box">
                         <!-- Tartare de poulpe acidulé -->
                         <div class="plat">
                             <!-- nom de l'entrée et sa description-->
                             <div class="plat__info">
-                                <h5 class="info__nom">Tartare de poulpe acidulé</h5>
-                                <p class="info__description">Aux zestes d'orange</p>
+                                <h5 class="plat__nom">Tartare de poulpe acidulé</h5>
+                                <div class="plat__description-prix">
+                                <p class="plat__description">Aux zestes d'orange</p>
+                                <!-- prix de l'entrée-->
+                                <p class="plat__prix">25€</p>
+                                <!--fin prix de l'entrée-->
+                                </div>
                             </div>
                             <!--fin nom de l'entrée et sa description-->
-                            <!-- prix de l'entrée-->
-                            <div class="plat__prix">
-                                25€
-                            </div>
-                            <!--fin prix de l'entrée-->
                             <!-- entrée choisie-->
                             <div class="plat__circle-check">
                                 <i class="fa-solid fa-circle-check"></i>
@@ -80,19 +86,21 @@
                             <!--fin entrée choisie-->
                         </div>
                         <!--fin Tartare de poulpe acidulé -->
-                        <!-- Velouté de légumes d'antan -->
+                        <!-- Velouté de légumes d'antan-->
                         <div class="plat">
-                            <!-- nom de l'entrée et sa description-->
+                            <!-- info plats-->
                             <div class="plat__info">
-                                <h5 class="info__nom">Velouté de légumes d'antan</h5>
-                                <p class="info__description">Carotte, panais, topinambour</p>
+                                <!--nom du plat-->
+                                <h5 class="plat__nom">Velouté de légumes d'antan</h5>
+                                <!--description du plat et prix-->
+                                <div class="plat__description-prix">
+                                <p class="plat__description">Carotte, panais, topinambour</p>
+                                <!-- prix de l'entrée-->
+                                 <p class="plat__prix">35€</p>
+                                </div>
+                                <!--fin description du plat et prix-->
                             </div>
-                            <!--fin nom de l'entrée et sa description-->
-                            <!-- prix de l'entrée-->
-                            <div class="plat__prix">
-                                35€
-                            </div>
-                             <!--fin prix de l'entrée-->
+                            <!-- fin info plats-->
                             <!-- entrée choisie-->
                             <div class="plat__circle-check">
                                 <i class="fa-solid fa-circle-check"></i>
@@ -102,17 +110,20 @@
                         <!-- fin Velouté de légumes d'antan -->
                         <!-- Soupe à l'oignon-->
                         <div class="plat">
-                            <!-- nom de l'entrée et sa description-->
+                            <!-- info plats-->
                             <div class="plat__info">
-                                <h5 class="info__nom">Soupe à l'oignon</h5>
-                                <p class="info__description">Revisitée</p>
+                                <!--nom du plat-->
+                                <h5 class="plat__nom">Soupe à l'oignon</h5>
+                                <!--description du plat et prix-->
+                                <div class="plat__description-prix">
+                                <!--description du plat -->  
+                                <p class="plat__description">Revisitée</p>
+                                <!-- prix du plat -->
+                                <p class="plat__prix"> 20€</p>
+                                </div>
+                                <!--fin description du plat-->
                             </div>
-                            <!--fin nom de l'entrée et sa description-->
-                            <!-- prix de l'entrée-->
-                            <div class="plat__prix">
-                                20€
-                            </div>
-                            <!--fin prix de l'entrée-->
+                            <!-- fin info plats-->
                             <!-- entrée choisie-->
                             <div class="plat__circle-check">
                                 <i class="fa-solid fa-circle-check"></i>
@@ -129,24 +140,24 @@
                     <!-- titre plats -->
                     <h3 class="carte-box__title">Plats</h3>
                     <!--fin titre plats -->
-                    <!-- barre dessous titre-->
-                    <div class="bottom-bar"></div>
-                     <!-- fin barre dessous titre-->
                     <!-- les différents plats-->
                     <div class="plats-box">
                         <!-- Coquilles Saint-Jacques-->
                         <div class="plat">
-                            <!-- nom du plat et sa description-->
+                            <!-- info plats-->
                             <div class="plat__info">
-                                <h5 class="info__nom">Coquilles Saint-Jacques</h5>
-                                <p class="info__description">Accompagnées d'une purée de panais</p>
+                                <!--nom du plat-->
+                                <h5 class="plat__nom">Coquilles Saint-Jacques</h5>
+                                <!--description du plat et prix-->
+                                <div class="plat__description-prix">
+                                <!--description du plat -->   
+                                <p class="plat__description">Accompagnées d'une purée de panais</p>
+                                <!-- prix du plat -->
+                                <p class="plat__prix"> 40€</p>
+                                </div>
+                                <!--fin description du plat-->
                             </div>
-                            <!--fin du plat et sa description-->
-                            <!-- prix du plat -->
-                            <div class="plat__prix">
-                                40€
-                            </div>
-                            <!--fin prix du plat -->
+                            <!-- fin info plats-->
                             <!-- plat choisi-->
                             <div class="plat__circle-check">
                                 <i class="fa-solid fa-circle-check"></i>
@@ -156,17 +167,20 @@
                         <!--fin Coquilles Saint-Jacques-->
                         <!-- Magret de canard-->
                         <div class="plat">
-                            <!-- nom du plat et sa description-->
+                            <!-- info plats-->
                             <div class="plat__info">
-                                <h5 class="info__nom">Magret de canard</h5>
-                                <p class="info__description">Et parmentier de pommes de terre</p>
+                                <!--nom du plat-->
+                                <h5 class="plat__nom">Magret de canard</h5>
+                                <!--description du plat et prix-->
+                                <div class="plat__description-prix">
+                                <!--description du plat -->   
+                                <p class="plat__description">Et parmentier de pommes de terre</p>
+                                <!-- prix du plat -->
+                                <p class="plat__prix">35€</p>
+                                </div>
+                                <!--fin description du plat-->
                             </div>
-                            <!--fin du plat et sa description-->
-                            <!-- prix du plat -->
-                            <div class="plat__prix">
-                                35€
-                            </div>
-                             <!--fin prix du plat -->
+                             <!-- fin info plats-->
                             <!-- plat choisi-->
                             <div class="plat__circle-check">
                                 <i class="fa-solid fa-circle-check"></i>
@@ -176,15 +190,18 @@
                         <!--fin Magret de canard-->
                         <!-- Pigeonneau d’Ille-et-Vilaine -->
                         <div class="plat">
-                            <!-- nom du plat et sa description-->
+                           <!-- info plats-->
                             <div class="plat__info">
-                                <h5 class="info__nom">Pigeonneau d’Ille-et-Vilaine </h5>
-                                <p class="info__description">Sur son lit de gnocchis aux légumes</p>
-                            </div>
-                            <!--fin du plat et sa description-->
-                            <!-- prix du plat -->
-                            <div class="plat__prix">
-                                44€
+                                <!--nom du plat-->
+                                <h5 class="plat__nom">Pigeonneau d’Ille-et-Vilaine</h5>
+                                <!--description du plat et prix-->
+                                <div class="plat__description-prix">
+                                <!--description du plat -->   
+                                <p class="plat__description">Sur son lit de gnocchis aux légumes</p>
+                                <!-- prix du plat -->
+                                <p class="plat__prix">44€</p>
+                                </div>
+                                <!--fin description du plat-->
                             </div>
                             <!--fin prix du plat -->
                             <!-- plat choisi-->
@@ -203,24 +220,24 @@
                     <!-- titre desserts -->
                     <h3 class="carte-box__title">Desserts</h3>
                      <!--fin titre desserts -->
-                    <!-- barre dessous titre-->
-                    <div class="bottom-bar"></div>
-                     <!-- fin barre dessous titre-->
                     <!-- les différents desserts-->
                     <div class="plats-box">
                         <!-- Pétales de violettes glacés-->
                         <div class="plat">
-                            <!-- nom du dessert et sa description-->
+                            <!-- info plats-->
                             <div class="plat__info">
-                                <h5 class="info__nom">Pétales de violettes glacés</h5>
-                                <p class="info__description">Et purée de noisettes</p>
+                                <!--nom du plat-->
+                                <h5 class="plat__nom">Pétales de violettes glacés</h5>
+                                <!--description du plat et prix-->
+                                <div class="plat__description-prix">
+                                <!--description du plat -->  
+                                <p class="plat__description">Et purée de noisettes</p>
+                                <!-- prix du plat -->
+                                <p class="plat__prix">18€</p>
+                                </div>
+                                <!--fin description du plat-->
                             </div>
-                            <!--fin du dessert et sa description-->
-                            <!-- prix du dessert -->
-                            <div class="plat__prix">
-                                18€
-                            </div>
-                            <!--fin prix du dessert -->
+                            <!-- fin info plats-->
                             <!-- dessert choisi-->
                             <div class="plat__circle-check">
                                 <i class="fa-solid fa-circle-check"></i>
@@ -230,17 +247,20 @@
                         <!--fin Pétales de violettes glacés-->
                         <!-- Fondant au chocolat -->
                         <div class="plat">
-                            <!-- nom du dessert et sa description-->
+                            <!-- info plats-->
                             <div class="plat__info">
-                                <h5 class="info__nom">Fondant au chocolat</h5>
-                                <p class="info__description">Revisité</p>
+                                <!--nom du plat-->
+                                <h5 class="plat__nom">Fondant au chocolat</h5>
+                                <!--description du plat et prix-->
+                                <div class="plat__description-prix">
+                                <!--description du plat --> 
+                                <p class="plat__description">Revisité</p>
+                                <!-- prix du plat -->
+                                <p class="plat__prix">22€</p>
                             </div>
-                            <!--fin du dessert et sa description-->
-                            <!-- prix du dessert -->
-                            <div class="plat__prix">
-                                22€
+                            <!--fin description du plat-->
                             </div>
-                            <!--fin prix du dessert -->
+                            <!-- fin info plats-->
                             <!-- dessert choisi-->
                             <div class="plat__circle-check">
                                 <i class="fa-solid fa-circle-check"></i>
@@ -248,45 +268,50 @@
                             <!--fin dessert choisi-->
                         </div>
                         <!--fin Fondant au chocolat -->
-                        <!-- Millefeuille croustillant-->
+                        <!-- Millefeuille croustillant -->
                         <div class="plat">
-                            <!-- nom du dessert et sa description-->
+                            <!-- info plats-->
                             <div class="plat__info">
-                                <h5 class="info__nom">Millefeuille croustillant</h5>
-                                <p class="info__description">Myrtilles et pâte d’amande</p>
+                                <!--nom du plat-->
+                                <h5 class="plat__nom">Millefeuille croustillant</h5>
+                                <!--description du plat et prix-->
+                                <div class="plat__description-prix">
+                                <!--description du plat --> 
+                                <p class="plat__description">Myrtilles et pâte d’amande</p>
+                                <!-- prix du plat -->
+                                <p class="plat__prix">23€</p>
                             </div>
-                            <!--fin du dessert et sa description-->
-                            <!-- prix du dessert -->
-                            <div class="plat__prix">
-                                23€  
+                            <!--fin description du plat-->
                             </div>
-                            <!--fin prix du dessert -->
+                            <!-- fin info plats-->
+
                             <!-- dessert choisi-->
                             <div class="plat__circle-check">
                                 <i class="fa-solid fa-circle-check"></i>
                             </div>
                             <!--fin dessert choisi-->
                         </div>
-                        <!--fin Millefeuille croustillant-->
+                        <!--fin Millefeuille croustillant -->
                     </div>
                     <!--fin les différents desserts-->
                 </div>
                 <!--fin les dessert -->
             </article>
             <!--fin article carte du restaurant -->
+                    <!--fin section menu du restaurant -->
+                        <!-- bouton commander -->
+                        <div class="btn-commander">
+                            Commander
+                        </div>
+                        <!--fin bouton commander -->
         </section>
-        <!--fin section menu du restaurant -->
-        <!-- bouton commander -->
-        <div class="btn-commander">
-            Commander
-        </div>
-        <!--fin bouton commander -->
+
     </main>
     <!--fin main page restaurant -->
     <!-- footer -->
     <footer>
         <!-- footer : titre -->
-        <h2 class="footer__title"></h2>
+        <h2 class="footer__title">ohmyfood</h2>
         <!-- fin footer : titre -->
         <!-- footer : liste -->
         <ul class="footer__list">
@@ -315,7 +340,9 @@
             <!--fin footer : élément 3 : mentions légales -->
             <!-- footer : élément 4 : contact -->
             <li class="footer__list__element">
-                <p>Contact</p>
+                <a href="mailto:contact@ohmyfood.fr"> 
+                    <p>Contact</p>
+                </a>
             </li>
             <!-- fin footer : élément 4 : contact -->
         </ul>

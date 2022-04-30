@@ -1,0 +1,341 @@
+/*pages desktop et tablette min-width : 768px*/
+
+.logo {
+	font-family: $font-logo;
+	font-size: 40px;
+	color:$color-5;
+	margin: 15px;
+	font-weight: 400;
+}
+.header__picto
+{
+	position: absolute;
+	left: 20PX;
+	font-size: 28px;
+	font-weight: 900;
+}
+.page-restaurant__img
+{
+	display: flex;
+	position: relative;
+	z-index: -1;
+	img {
+		width: 100%;
+		object-fit: cover;
+		object-position: 0% 80%;
+		max-height: 600px;
+		height: auto;
+	}
+}
+.menu
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: -50px;
+	width: 100%;
+	background-color: $color-7;
+	@include radius (35px 35px 0 0);
+	&__title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 95%;
+		justify-content: flex-start;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		flex: 3;
+	}
+	&__nom-restaurant{
+		font-family: $font-logo;
+		font-size: 26px;
+		font-weight: 200;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		width: 70%;
+	}
+	
+	&__picto {
+	    position: absolute;
+    	top: 20px;
+    	right: 0px;
+    	font-size: 25px;
+    	font-weight: 500;
+	
+		&__empty
+		{
+		    position: absolute;
+    		top: -25px;
+    		right: 5px;
+			width: 30px;
+			i
+			{
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: black;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		&__empty:hover
+		{
+		    position: absolute;
+    		top: -25px;
+    		right: 5px;
+			width: 30px;
+			i
+			{
+				-webkit-text-stroke-width: 0px;
+				-webkit-text-stroke-color:transparent;
+				-webkit-text-fill-color: transparent;
+			}
+
+		}
+		&__full
+		{	    
+			position: absolute;
+			top: -25px;
+			right: 5px;
+			width: 30px;
+			i
+			{
+				-webkit-text-fill-color: transparent;
+				-webkit-text-stroke-color:transparent;
+			}
+			}
+
+			&__full:hover
+			{
+				position: absolute;
+				top: -25px;
+				right: 5px;
+				width: 30px;
+				i
+				{
+				-webkit-animation: anim-heart 1s linear 0s 1 normal forwards;
+          		animation: anim-heart 1s linear 0s 1 normal forwards;
+				@include linear-gradient($from, $to);
+				cursor:copy;
+				}
+			}
+	}
+.carte {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
+	&-box {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		width: 30%;
+		&__title {
+			margin: 25px 0px 10px 5px;
+			padding-bottom: 5px;
+			/*
+			font-family: 'Roboto', sans-serif;*/
+			font-size: 18px;
+			text-transform: uppercase;
+			max-width: 45px;
+			border-bottom: solid $color-3;
+		}
+	}
+
+}
+.plats-box {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+.plat
+{
+	position: relative;
+	width: 100%;
+	margin: 10px auto 10px auto;
+	background-color: $color-4;
+	@include radius(10px) ;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	@include box-shadow($shadow);
+	-webkit-animation: apparition-plats 1.5s forwards;
+	animation: apparition-plats 1.5s forwards;
+	opacity: 0;
+	overflow: hidden;
+	&:hover .plat__circle-check {
+		-webkit-transform: translateX(0%);
+			-ms-transform: translateX(0%);
+				transform: translateX(0%);
+		-webkit-transition: 0.4s ease;
+		-o-transition: 0.4s ease;
+		transition: 0.4s ease;
+		cursor: pointer;
+	  }
+	  &:hover .plat__prix
+  {
+    padding-right: 60px;
+  }
+  &:hover .plat__circle-check i
+  {
+	  transform:rotate(360deg);
+	  -ms-transform:rotate(360deg);
+	  -webkit-transform:rotate(360deg);
+  }
+	&__info
+		{
+		display: flex;
+		flex-direction: column;
+		margin: 10px;
+		width: 95%;
+		}
+	&__nom
+		{
+		display: flex;
+		font-weight: 700;
+		font-size: 16px;
+		margin: 4px 0px 4px 0px;
+		&:hover
+		{
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			cursor: pointer;
+		}
+		}
+	&__description-prix
+		{
+			width: 95%;
+			display: flex;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+	&__description
+		{
+			font-weight: 400;
+			font-size: 14px;
+			width: 265px;
+			margin: 4px 0px 4px 0px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			flex: 3;
+		}
+	&__prix
+		{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:nowrap; 
+    font-weight: 700;
+    font-size: 15px;
+    font-weight: 500;
+	margin:0;
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+
+		}
+
+	&__circle-check
+	{
+		position: absolute;
+		top: 0;
+		right: 0px;
+		width: 75px;
+		height: 100%;
+		font-size: 22px;
+		overflow: hidden;
+		@include radius(0 10px 10px 0);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $color-3;
+		color: $color-4;
+		-webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+
+		i
+		{
+			-webkit-transition: -webkit-transform 1s ease-in-out;
+			-ms-transition: -ms-transform 1s ease-in-out;
+			transition: transform 1s ease-in-out; 
+		}
+	}
+
+	&:nth-child(2) {
+		-webkit-animation-delay: 0.4s;
+		animation-delay: 0.4s;
+	}
+	&:nth-child(3) {
+		-webkit-animation-delay: 0.8s;
+		animation-delay: 0.8s;
+	}
+	&:nth-child(4) {
+		-webkit-animation-delay: 1.2s;
+		animation-delay: 1.2s;
+	}
+}
+}
+.btn-commander {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	width: 170px;
+	@include radius(30px);
+	padding: 15px;
+	color: $color-4;
+	@include linear-gradient($from, $to);
+	@include box-shadow($shadow);
+	margin: 30px 0px 35px 0px;
+	cursor: pointer;
+	&:hover {
+		-webkit-filter: brightness(1.1);
+		filter: brightness(1.1);
+		/*-webkit-box-shadow: 0px 1px 10px $color-10;*/
+		@include box-dark-shadow ($dark-shadow);
+	}
+}
+
+/*pages mobil max-width: 767px*/
+
+@media only screen and (max-width : 767px)
+{
+body
+{
+	box-sizing: content-box;
+	max-width: 767px;
+	width: 100%;
+	margin: auto;
+	font-family: $font-text;
+	overflow-x: hidden;
+}
+.carte
+{
+		display: flex;
+		flex-direction: column;
+		width: 95%;
+}
+.carte-box
+{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		width: 100%;
+}
+.menu__picto
+{
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	font-size: 25px;
+	font-weight: 500;
+}
+}
+
+
