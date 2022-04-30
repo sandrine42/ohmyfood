@@ -893,8 +893,8 @@ header {
 	flex-direction: row;
 	align-items: flex-start;
 	@include box-shadow($shadow);
-	-webkit-animation: apparition 1.5s forwards;
-	animation: apparition 1.5s forwards;
+	-webkit-animation: apparition-plats 1.5s forwards;
+	animation: apparition-plats 1.5s forwards;
 	opacity: 0;
 	overflow: hidden;
 	&:hover .plat__circle-check {
@@ -1139,7 +1139,7 @@ body
 
 
 
-@-webkit-keyframes apparition
+@-webkit-keyframes apparition-plats
 {
     0%
     {
@@ -1154,7 +1154,7 @@ body
     transform: translateY(0);
     }
 }
-@keyframes apparition
+@keyframes apparition-plats
 {
     0%
     {
@@ -1169,35 +1169,6 @@ body
     transform: translateY(0);
     }
 }
-/*
-@-webkit-keyframes slide
-{
-    0%
-    {
-	-webkit-transform: translateX(0);
-	transform: translateX(0);
-	display: contents;
-    }
-    100%
-    {
-	-webkit-transform: translateX(-5em);
-	transform: translateX(-5em);
-	display: contents;
-    }
-}
-@keyframes slide {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      display: contents;
-    }
-    100% {
-      -webkit-transform: translateX(-5em);
-              transform: translateX(-5em);
-      display: contents;
-    }
-  }*/
-
 
   @-webkit-keyframes loading {
 	0% {
