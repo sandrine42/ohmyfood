@@ -240,6 +240,7 @@ header
 		width: 40px;
 		height: 40px;
 		text-align: center;
+		z-index: 3;
 		&__empty
 		{
 		    position: absolute;
@@ -438,6 +439,7 @@ main{
 		right: 20px;
 		font-size: 25px;
 		font-weight: 500;
+		z-index: 3;
 	}
 }
 	.footer__title
