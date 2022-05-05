@@ -29,26 +29,13 @@ border-radius: $radius
 
 /*@mixin box-shadow*/
 
-@mixin box-shadow($shadow...)
+@mixin box-shadow($drop-shadow...)
 {
-	-webkit-box-shadow: $shadow;
-	   -moz-box-shadow: $shadow;       
-			box-shadow: $shadow;
+	-webkit-box-shadow: $drop-shadow;
+	   -moz-box-shadow: $drop-shadow;       
+			box-shadow: $drop-shadow;
 }
 
-@mixin box-dark-shadow($dark-shadow...)
-{
-	-webkit-box-shadow: $dark-shadow;
-	   -moz-box-shadow: $dark-shadow;       
-			box-shadow: $dark-shadow;
-}
-
-@mixin box-search-shadow($search-shadow...)
-{
-	-webkit-box-shadow: $shadow;
-	   -moz-box-shadow: $shadow;       
-			box-shadow: $shadow;
-}
 
 /*@mixin loader*/
 

@@ -5,6 +5,7 @@ body
 	box-sizing: content-box;
 	margin: auto;
 	overflow-x: hidden;
+	overflow-y: scroll;
 }
 header
 {
@@ -26,7 +27,7 @@ header
 	background-color: $color-8;
 	display: flex;
 	height: 45px;
-    @include box-search-shadow(box-search-shadow);
+    @include box-shadow($search-shadow);
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
@@ -88,7 +89,7 @@ header
 		{
 			-webkit-filter: brightness(1.1);
 			filter: brightness(1.1);
-			@include box-dark-shadow($dark-shadow) ;
+			@include box-shadow($dark-shadow) ;
 		}
 	}
 }

@@ -1,15 +1,14 @@
 
 .loader-container {
-	display: flex;
 	position: fixed;
-	top: 0;
-	left: 0;
 	opacity: 1;
 	width: 100%;
 	height: 100%;
+	top: 0;
+	left: 0;
 	background:$color-13;
-	z-index: 1;
-	overflow-x: hidden;
+	z-index: 5;
+	pointer-events: none;
 	-webkit-animation: fade-loader 0.5s ease 4s forwards;
 	animation: fade-loader 0.5s ease 4s forwards;
 
@@ -24,25 +23,25 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	width: 55vh;
-	height: 55vh;
-	min-width: 10vh;
-	min-height: 10vh;
+	width: 42vw;
+	height: 42vw;
+	min-width: 15vw;
+	min-height: 15vw;
 	background: transparent;
-	border: 0.35vh solid $color-12;
+	border: 0.35vw solid $color-12;
 	border-radius: 50%;
 	flex-direction: column;
 	justify-content: center;
 	&::before {
 		content: '';
 		position: absolute;
-		top: -0.35vh;
-		left: -0.35vh;
+		top: -0.35vw;
+		left: -0.35vw;
 		width: 100%;
 		height: 100%;
-		border: 0.35vh solid transparent;
-		border-top: 0.35vh solid $color-3;
-		border-right: 0.35vh solid $color-3;
+		border: 0.35vw solid transparent;
+		border-top: 0.35vw solid $color-3;
+		border-right: 0.35vw solid $color-3;
 		border-radius: 50%;
 		-webkit-animation: anim-ring 1s linear 0.1s 5 both;
 		animation: anim-ring 1s linear 0.1s 5 both;
@@ -51,10 +50,10 @@
 span {
 	display: block;
 	position: absolute;
-	top: calc(50% - 0.2vh);
+	top: calc(50% - 0.2vw);
 	left: 50%;
 	width: 50%;
-	height: 0.45vh;
+	height: 0.45vw;
 	background: transparent;
 	transform-origin: left;
 	-webkit-animation: anim-ball 1s linear 0.1s 5 both;
@@ -62,22 +61,22 @@ span {
 	&::before {
 		content: '';
 		position: absolute;
-		width: 1.8vh;
-		height: 1.8vh;
+		width: 1.8vw;
+		height: 1.8vw;
 		border-radius: 50%;
 		background: $color-3;
-		top: -0.68vh;
-		right: -1.2vh;
+		top: -0.68vw;
+		right: -1.2vw;
 	}
 }
 .loader {
 	display: flex;
 	font-family: $font-logo;
-	font-size: 7vh;
+	font-size: 6vw;
 	color: $color-4;
 	justify-content: center;
 	align-items: center;
-	letter-spacing: 1.15vh;
+	letter-spacing: 1.15vw;
 	p {
 		display: inline-block;
 		margin: 0 -0.05em;
@@ -88,30 +87,31 @@ span {
 		-webkit-animation: loading 1s linear 5 alternate;
 		animation: loading 1s linear 5 alternate;
 		&:nth-child(1) {
-			-webkit-animation-delay: 0s;
+			-webkit-animation-delay: 0.1s;
 			animation-delay: 0.1s;
 		}
 		&:nth-child(2) {
-			-webkit-animation-delay: 0.1s;
+			-webkit-animation-delay: 0.2s;
 			animation-delay: 0.2s;
 		}
 		&:nth-child(3) {
+			-webkit-animation-delay: 0.3s;
 			animation-delay: 0.3s;
 		}
 		&:nth-child(4) {
-			-webkit-animation-delay: 0.3s;
+			-webkit-animation-delay: 0.4s;
 			animation-delay: 0.4s;
 		}
 		&:nth-child(5) {
-			-webkit-animation-delay: 0.4s;
+			-webkit-animation-delay: 0.5s;
 			animation-delay: 0.5s;
 		}
 		&:nth-child(6) {
-			-webkit-animation-delay: 0.5s;
+			-webkit-animation-delay: 0.6s;
 			animation-delay: 0.6s;
 		}
 		&:nth-child(7) {
-			-webkit-animation-delay: 0.6s;
+			-webkit-animation-delay: 0.7s;
 			animation-delay: 0.7s;
 		}
 	}

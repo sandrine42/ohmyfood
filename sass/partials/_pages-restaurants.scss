@@ -305,7 +305,7 @@ header {
 	&:hover {
 		-webkit-filter: brightness(1.1);
 		filter: brightness(1.1);
-		@include box-dark-shadow ($dark-shadow);
+		@include box-shadow ($dark-shadow);
 	}
 }
 footer {
