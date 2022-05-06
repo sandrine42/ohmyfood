@@ -1080,18 +1080,18 @@ span::before {
   }
 
   .loader {
-    font-size: 6vw;
+    font-size: 7vw;
   }
 }
 /* tablette (landscape) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 600px) and (max-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .ring {
-    width: 55vw;
-    height: 55vw;
+    width: 40vw;
+    height: 40vw;
   }
 
   .loader {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 }
 /*index*/
