@@ -112,6 +112,9 @@ header
 		align-items: center;
 		width: 100%;
 		justify-content: space-around;
+		p{
+			padding-right: 5px;
+		}
 		&-btn {
 			display: flex;
 			align-items: center;
@@ -377,6 +380,7 @@ footer
 {	
 	body
 {
+	
 	box-sizing: content-box;
 	max-width: 767px;
 	margin: auto;
@@ -385,6 +389,7 @@ footer
 }
 main{
     width: 100%;
+	overflow-x: hidden;
 }
 .method__step
 {
