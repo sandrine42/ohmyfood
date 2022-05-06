@@ -176,11 +176,13 @@ header {
 		-webkit-transition: 0.4s ease;
 		-o-transition: 0.4s ease;
 		transition: 0.4s ease;
+		flex:3;
 		cursor: pointer;
 	  }
 	  &:hover .plat__prix
   {
-    padding-right: 60px;
+    padding-right: 65px;
+	width: 30px;
   }
   &:hover .plat__circle-check i
   {
@@ -195,18 +197,38 @@ header {
 		margin: 10px;
 		width: 95%;
 		}
+		&__nom-prix
+		{
+			width: 95%;
+			display: flex;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
 	&__nom
 		{
-		display: flex;
-		font-weight: 700;
-		font-size: 16px;
-		margin: 4px 0px 4px 0px;
-		&:hover
-		{
+			font-weight: 700;
+			width: 95%;
+			font-size: 16px;
+			margin: 4px 0px 4px 0px;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
+			flex: 3;
+		&:hover
+		{
+			font-weight: 700;
+			width: 95%;
+			font-size: 16px;
+			margin: 4px 0px 4px 0px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			flex: 3;
 			cursor: pointer;
+
 		}
 		}
 	&__description-prix
@@ -223,7 +245,6 @@ header {
 		{
 			font-weight: 400;
 			font-size: 14px;
-			width: 265px;
 			margin: 4px 0px 4px 0px;
 			overflow: hidden;
 			white-space: nowrap;
