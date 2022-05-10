@@ -698,53 +698,23 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /*variables couleurs
-	color-1: #9356DC
-						font .method__step-btn:hover i
-						background .method__number
-						backround (gradient) .presentation__btn
-	color-2: #FF79DA
-						background .presentation__btn (Old browsers)
-						backround (gradient) .presentation__btn
-	color-3 : #99E2D0
-						background .card__new
-	color-4 : white
-						background header
-								   .method
-								   .card
-						font .presentation__btn
-							 .method__number
-							 footer
-							 .footer__title
-							 .footer__list__element a
-
- 	color-5 : black
-						font .logo
-							 .search__city
-							 .restaurant__boxes__card a
-						font border .card__heart i
-	color-6 : hsl(0, 0%, 50%)
-						font .presentation__text
-							 .method i
-	color-7 : hsl(0, 0%, 96%)
-						background .presentation
-								   .method__step-btn
-								   .restaurants
-	color-8 : hsl(0, 0%, 92%)
-						background .search
-								   .search__city
-	$color-9:hsla(0, 0%, 30%, 0.9)
-						box-shadow .presentation__btn
-									.method__step-btn
-									.card
-	$color-10:hsla(0, 0%, 30%, 0.9)
-						box-shadow .presentation__btn:hover
-	$color-11:hsl(267, 66%, 95%)
-						background &:hover (.plat)
-	$color-12:hsl(165, 56%, 35%)
-						font .card__new
-	$color-13:hsl(0, 0%, 30%)
-						background footer
-	*/
+Rappel
+color-1 : couleur primaire du dégradé des bouton, le hover des picto sur la méthode
+color-2 : couleur secondaire du dégradé
+color-3 : couleur Tertiaire de fond de nouveau
+color-4 : couleur de la typo sur fond foncé, du fond du header,
+		  du fond de la méthode (fonctionnement) et du fond des cartes de restaurants
+color-5 : couleur de la typo du logo, des textes et titres en général
+color-6 : couleur de la typo de présentation et des picto de la méthode
+color-7 : couleur de fond de la présentation, des cards étapes de la méthode
+		  et du fond de la partie restaurants
+color-8 : couleur du fond de la recherche de ville
+color-9 : couleur des ombres portées des boutons, des cards
+color-10 : couleur de l'ombre portée (plus foncée) pour le hover des boutons 
+$color-11 : couleur du fond des cartes étapes de la méthode (fonctionnement) en hover
+color-12 : couleur de la typo de la carte new (nouveau)
+color-13 : couleur du fond du footer
+*/
 /*variables fonts*/
 /*variables couleurs linear-gradient*/
 /*variables shadows*/
